@@ -1,0 +1,15 @@
+CREATE TABLE posts
+(
+    id      SERIAL PRIMARY KEY,
+    title VARCHAR(50),
+    content   VARCHAR(300) NOT NULL,
+    creationDate TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE comments
+(
+    id      SERIAL PRIMARY KEY,
+    title VARCHAR(50),
+    content   VARCHAR(300) NOT NULL,
+    postId INTEGER,
+    creationDate TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
